@@ -8,6 +8,10 @@ public class BookPojectiles : MonoBehaviour
     private float timeLimit = 4f;
 
 
+    private void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,6 +27,11 @@ public class BookPojectiles : MonoBehaviour
     {
         if (other.CompareTag("Target"))
         {
+            Destroy(other.gameObject);
+
+
+
+
             Destroy(gameObject);
         }
     }

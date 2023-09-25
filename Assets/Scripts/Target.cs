@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    Score score;
+    SpawnTarget targetcount;
+
+
+
+
+    public void OnDestroy()
     {
-        
+        SpawnTarget targetcount = GameObject.Find("TargetSpawner").GetComponent<SpawnTarget>();
+        targetcount.counter -= 1;
+        Debug.Log("Target Destroyed");
     }
 }
