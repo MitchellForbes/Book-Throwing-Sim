@@ -7,7 +7,6 @@ public class Target : MonoBehaviour
 
     Score score;
 
-
     public void OnDestroy()
     {
         SpawnTarget targetcount = GameObject.Find("TargetSpawner").GetComponent<SpawnTarget>();

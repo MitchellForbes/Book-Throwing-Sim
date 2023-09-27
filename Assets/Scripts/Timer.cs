@@ -13,18 +13,21 @@ public class Timer : MonoBehaviour
     Score score;
     SpawnTarget targetTimer;
 
+
     public TextMeshProUGUI startText;
+    public TextMeshProUGUI timerText;
 
 
     void Start()
     {
         targetTimer = GameObject.Find("TargetSpawner").GetComponent<SpawnTarget>();
+
     }
     // Update is called once per frame
     void Update()
     {
 
-
+        TimerTextChange();
         if (timerState == true)
         {
             timer -= Time.deltaTime;
@@ -33,8 +36,10 @@ public class Timer : MonoBehaviour
         if (timer <= timelimit)
         {
             timerState = false;
-            timer = 0f;
             targetTimer.timerActive = false;
+            timerText.gameObject.SetActive(false);
+            timer = 60f;
+            targetTimer.DestroyAllSpawned();
         }
 
     }
@@ -48,6 +53,7 @@ public class Timer : MonoBehaviour
             targetTimer.timerActive = true;
         }
         timerState = true;
+        timerText.gameObject.SetActive(true);
     }
 
     private void OnMouseOver()
@@ -58,5 +64,11 @@ public class Timer : MonoBehaviour
     private void OnMouseExit()
     {
         startText.gameObject.SetActive(false);
+    }
+
+
+    private void TimerTextChange()
+    {
+        timerText.text = string.Format("Time Left: {00}", Mathf.Floor(timer));
     }
 }

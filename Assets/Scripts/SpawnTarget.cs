@@ -8,6 +8,8 @@ public class SpawnTarget : MonoBehaviour
     public int counter;
     public GameObject bedTarget;
 
+    private GameObject[] Beds;
+
     public bool timerActive = false;
     // Start is called efore the first frame update
     void Start()
@@ -29,6 +31,13 @@ public class SpawnTarget : MonoBehaviour
         }
     }
     
-
+    public void DestroyAllSpawned()
+    {
+        Beds = GameObject.FindGameObjectsWithTag("Target");
+        foreach (GameObject targets in Beds)
+        {
+            Destroy(targets);
+        }
+    }
 
 }
