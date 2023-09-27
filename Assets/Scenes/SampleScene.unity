@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427176, b: 0.5645241, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1639,8 +1639,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2d9f4cb212d58478fa50d87f9d39dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 30
   rb: {fileID: 0}
+  cc: {fileID: 0}
 --- !u!54 &1976986996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1705,6 +1706,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: -2995231572020277607, guid: 8e2164ba4d3815f48a356431739ec843, type: 3}
   spawnPoint: {fileID: 441911783}
+--- !u!143 &1976987003
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976986989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.45
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1991482019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,6 +2041,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7980879441026476894, guid: b391f2849ab39894397f60002826ab08, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1976986997}
+    - targetCorrespondingSourceObject: {fileID: 7980879441026476894, guid: b391f2849ab39894397f60002826ab08, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1976987003}
     - targetCorrespondingSourceObject: {fileID: 6678072161005441438, guid: b391f2849ab39894397f60002826ab08, type: 3}
       insertIndex: -1
       addedObject: {fileID: 156890842}

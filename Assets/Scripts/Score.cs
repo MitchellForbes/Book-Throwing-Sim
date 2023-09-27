@@ -14,7 +14,7 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = "Score: " + scorecount.ToString();
+        scoreText.text = $"Score: {scorecount}";
     }
 
     void Update()
@@ -26,7 +26,7 @@ public class Score : MonoBehaviour
     public void AddPoints()
     {
         scorecount += 1;
-        scoreText.text = "Score: " + scorecount.ToString();
+        scoreText.text = $"Score: {scorecount}";
     }
 
 
@@ -38,6 +38,6 @@ public class Score : MonoBehaviour
         }
 
         scorecount = 0;
-        scoreText.text = "Score: " + scorecount.ToString();
+        scoreText.text = $"Score: {scorecount}";
     }
 }

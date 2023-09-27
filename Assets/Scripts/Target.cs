@@ -6,10 +6,6 @@ public class Target : MonoBehaviour
 {
 
     Score score;
-    SpawnTarget targetcount;
-    
-
-
 
 
     public void OnDestroy()
